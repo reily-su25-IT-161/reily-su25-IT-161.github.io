@@ -1,0 +1,15 @@
+
+body {
+    background-image: url(../images/world.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100px;
+    margin: 0;
+}
+
+p {
+    color: green;
+    width: 500px;
+    border: 1px solid black;
+}
