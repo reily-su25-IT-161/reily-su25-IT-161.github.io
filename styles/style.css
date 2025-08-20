@@ -1,4 +1,5 @@
 
+/*
 body {
     background-image: url(../images/world.jpg);
     background-position: center;
@@ -7,6 +8,29 @@ body {
     height: 100px;
     margin: 0;
 }
+*/
+
+.banner-div {
+    width: 100%; /* Or a specific width */
+    height: 300px; /* Or a specific height */
+    background-image: url('../images/world_map.PNG'); /* Specify the image path */
+    background-size: cover; /* Optional: Scale the image to cover the entire div */
+    background-position: center; /* Optional: Center the image */
+    background-repeat: no-repeat; /* Optional: Prevent image repetition */
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.flex-break {
+    flex-basis: 100%;
+    height: 0;
+}
+/*
+<img src="images/world_map.PNG" alt="LoveGeoBanner" style="height: 100vh; width: 100vw;" />
+*/
 
 p {
     color: green;
