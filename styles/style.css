@@ -1,23 +1,21 @@
-
-/*
-body {
-    background-image: url(../images/world.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100px;
+/* Basic Reset & Global Styles */
+/** {
     margin: 0;
-}
-*/
+    padding: 0;
+    box-sizing: border-box;
+}*/
 
 .banner-div {
+    border-image: fill 1 linear-gradient(hsl(240 100% 20% / .3), hsl(0 100% 20% / .3));
+    /*border-image-slice: fill 1;*/
     width: 100%; /* Or a specific width */
     height: 300px; /* Or a specific height */
     background-image: url('../images/world_map.PNG'); /* Specify the image path */
-    background-size: cover; /* Optional: Scale the image to cover the entire div */
-    background-position: center; /* Optional: Center the image */
-    background-repeat: no-repeat; /* Optional: Prevent image repetition */
-    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -28,12 +26,75 @@ body {
     flex-basis: 100%;
     height: 0;
 }
-/*
-<img src="images/world_map.PNG" alt="LoveGeoBanner" style="height: 100vh; width: 100vw;" />
-*/
 
-p {
-    color: green;
-    width: 500px;
-    border: 1px solid black;
+
+/* site nav styling */
+.site-nav {
+    flex-basis: 100%;
+    height: 0;
+    background-color: rgba(25, 25, 112, 0.85);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(2px);
+    /*margin-top: 0.3rem;*/
+    margin-bottom: 0.3rem;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /*padding: 0.5rem 0;*/
+
+    @media screen and (width < 450px) {
+        padding: .2rem;
+    }
 }
+
+.nav-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    @media screen and (width >=900px) {
+        font-size: 1.5rem;
+        justify-content: space-around;
+        width: 50%;
+        /* this media query will look balanced if there is a logo on the left or right side. If the nav is off-center, it will read better as one component imho */
+    }
+
+    @media screen and (width < 450px) {
+        font-size: 0.8rem;
+        justify-content: space-evenly;
+    }
+}
+
+.nav-li {
+    list-style: none;
+}
+
+.nav-a {
+    margin-top: .5rem;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.nav-a:hover {
+    background-color: rgba(25, 25, 112, 0.85);
+    color: lightsteelblue;
+}
+
+.nav-a:active {
+    color: yellowgreen;
+}
+
+
+/* iframe centering */
+iframe {
+    display: block;
+    margin-left: auto; /* Automatically set left margin */
+    margin-right: auto; /* Automatically set right margin */
+    width: 60%;
+}
+
